@@ -12,8 +12,8 @@ import Foundation
 
 public class Prayer {
     
-    var timeStamp: String?
-   // var timeStamp: Date?
+    //var timeStamp: String?
+    var timeStamp: Date?
     var description: String?
     
   /*  init() {
@@ -21,7 +21,7 @@ public class Prayer {
      
      }*/
     
-    init( description: String, timeStamp: String) {
+    init( description: String, timeStamp: Date) {
         
       //  self.name = name
         self.description = description

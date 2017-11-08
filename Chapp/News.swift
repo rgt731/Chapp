@@ -12,8 +12,8 @@ import Foundation
 
 public class News {
     
-    var timeStamp: String?
-    // var timeStamp: Date?
+    //var timeStamp: String?
+    var timeStamp: Date?
     var description: String?
     
     /*  init() {
@@ -21,12 +21,12 @@ public class News {
      
      }*/
     
-    init( description: String, timeStamp: String) {
+    init( description: String, timeStamp: Date) {
         
         //  self.name = name
         self.description = description
         self.timeStamp = timeStamp
-  }
+    }
 
-
+ 
 }
