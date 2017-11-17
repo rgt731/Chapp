@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D60809F1FBE89FE00019081 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60809E1FBE89FE00019081 /* ParticipantTableViewCell.swift */; };
+		5D6080A11FBE90C300019081 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A01FBE90C300019081 /* PrayerTableViewCell.swift */; };
+		5D6080A31FBE90D600019081 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A21FBE90D600019081 /* AnnouncementTableViewCell.swift */; };
+		5D6080A71FBEA10600019081 /* AnnouncementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A61FBEA10600019081 /* AnnouncementTableViewController.swift */; };
+		5D6080A91FBEA33800019081 /* AnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A81FBEA33800019081 /* AnnouncementViewController.swift */; };
+		5D6080AB1FBF4DC000019081 /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080AA1FBF4DC000019081 /* PrayerViewController.swift */; };
+		5D6080AD1FBF4DE800019081 /* PrayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080AC1FBF4DE800019081 /* PrayerTableViewController.swift */; };
+		5D6080AF1FBF5E7700019081 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080AE1FBF5E7700019081 /* Participant.swift */; };
 		5DD79F8F1FB217C000EC0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79F8E1FB217C000EC0D81 /* AppDelegate.swift */; };
 		5DD79F911FB217C000EC0D81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79F901FB217C000EC0D81 /* LoginViewController.swift */; };
 		5DD79F941FB217C000EC0D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD79F921FB217C000EC0D81 /* Main.storyboard */; };
@@ -16,10 +24,18 @@
 		5DD79FA31FB29A0600EC0D81 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */; };
 		5DD79FA51FB2AB0100EC0D81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */; };
 		5DD79FA71FB2B4F900EC0D81 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */; };
-		5DD79FA91FB2BADB00EC0D81 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA81FB2BADB00EC0D81 /* News.swift */; };
+		5DD79FA91FB2BADB00EC0D81 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA81FB2BADB00EC0D81 /* Announcement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D60809E1FBE89FE00019081 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		5D6080A01FBE90C300019081 /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
+		5D6080A21FBE90D600019081 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
+		5D6080A61FBEA10600019081 /* AnnouncementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewController.swift; sourceTree = "<group>"; };
+		5D6080A81FBEA33800019081 /* AnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewController.swift; sourceTree = "<group>"; };
+		5D6080AA1FBF4DC000019081 /* PrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
+		5D6080AC1FBF4DE800019081 /* PrayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewController.swift; sourceTree = "<group>"; };
+		5D6080AE1FBF5E7700019081 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		5DD79F8B1FB217C000EC0D81 /* Chapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD79F8E1FB217C000EC0D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD79F901FB217C000EC0D81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +47,7 @@
 		5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
-		5DD79FA81FB2BADB00EC0D81 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		5DD79FA81FB2BADB00EC0D81 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D6080B01FBF62D800019081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */,
+				5D6080AE1FBF5E7700019081 /* Participant.swift */,
+				5DD79FA81FB2BADB00EC0D81 /* Announcement.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D6080B11FBF632A00019081 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */,
+				5DD79F901FB217C000EC0D81 /* LoginViewController.swift */,
+				5D6080AA1FBF4DC000019081 /* PrayerViewController.swift */,
+				5D6080AC1FBF4DE800019081 /* PrayerTableViewController.swift */,
+				5D6080A81FBEA33800019081 /* AnnouncementViewController.swift */,
+				5D6080A61FBEA10600019081 /* AnnouncementTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5D6080B21FBF633200019081 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D6080A01FBE90C300019081 /* PrayerTableViewCell.swift */,
+				5D6080A21FBE90D600019081 /* AnnouncementTableViewCell.swift */,
+				5D60809E1FBE89FE00019081 /* ParticipantTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5DD79F821FB217C000EC0D81 = {
 			isa = PBXGroup;
 			children = (
@@ -65,16 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				5DD79F8E1FB217C000EC0D81 /* AppDelegate.swift */,
-				5DD79F901FB217C000EC0D81 /* LoginViewController.swift */,
-				5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */,
+				5D6080B11FBF632A00019081 /* Controllers */,
+				5D6080B21FBF633200019081 /* Views */,
+				5D6080B01FBF62D800019081 /* Models */,
 				5DD79F921FB217C000EC0D81 /* Main.storyboard */,
 				5DD79FA01FB24AEB00EC0D81 /* DataSet.swift */,
 				5DD79F951FB217C000EC0D81 /* Assets.xcassets */,
 				5DD79F971FB217C000EC0D81 /* LaunchScreen.storyboard */,
 				5DD79F9A1FB217C000EC0D81 /* Info.plist */,
 				5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */,
-				5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */,
-				5DD79FA81FB2BADB00EC0D81 /* News.swift */,
 			);
 			path = Chapp;
 			sourceTree = "<group>";
@@ -151,12 +199,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6080AD1FBF4DE800019081 /* PrayerTableViewController.swift in Sources */,
+				5D6080A11FBE90C300019081 /* PrayerTableViewCell.swift in Sources */,
+				5D6080AF1FBF5E7700019081 /* Participant.swift in Sources */,
 				5DD79FA71FB2B4F900EC0D81 /* Prayer.swift in Sources */,
 				5DD79FA51FB2AB0100EC0D81 /* FirstViewController.swift in Sources */,
 				5DD79FA11FB24AEB00EC0D81 /* DataSet.swift in Sources */,
+				5D60809F1FBE89FE00019081 /* ParticipantTableViewCell.swift in Sources */,
 				5DD79F911FB217C000EC0D81 /* LoginViewController.swift in Sources */,
-				5DD79FA91FB2BADB00EC0D81 /* News.swift in Sources */,
+				5DD79FA91FB2BADB00EC0D81 /* Announcement.swift in Sources */,
 				5DD79FA31FB29A0600EC0D81 /* MainTabController.swift in Sources */,
+				5D6080A31FBE90D600019081 /* AnnouncementTableViewCell.swift in Sources */,
+				5D6080A71FBEA10600019081 /* AnnouncementTableViewController.swift in Sources */,
+				5D6080AB1FBF4DC000019081 /* PrayerViewController.swift in Sources */,
+				5D6080A91FBEA33800019081 /* AnnouncementViewController.swift in Sources */,
 				5DD79F8F1FB217C000EC0D81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,21 +11,24 @@ import Foundation
 
 
 public class Prayer {
-    
-    //var timeStamp: String?
-    var timeStamp: Date?
+
+    var title: String?
     var description: String?
+    var timeStamp: Date?
+
     
-  /*  init() {
+     init() {
       timeStamp = Date()
      
-     }*/
+     }
     
-    init( description: String, timeStamp: Date) {
+    init(  title: String, description: String, timeStamp: Date) {
         
       //  self.name = name
+        self.title = title
         self.description = description
         self.timeStamp = timeStamp
+
     }
     
   /*  convenience init(name: String, description: String) {
