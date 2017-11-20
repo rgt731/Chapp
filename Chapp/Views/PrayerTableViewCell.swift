@@ -9,16 +9,14 @@
 import UIKit
 
 class PrayerTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var PrayerTitle: UILabel!
+    @IBOutlet weak var PrayerDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBOutlet weak var PrayerTitle: UILabel!
-    @IBOutlet weak var PrayerDescription: UILabel!
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

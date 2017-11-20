@@ -17,10 +17,10 @@ public class Prayer {
     var timeStamp: Date?
 
     
-     init() {
+   /*  init() {
       timeStamp = Date()
      
-     }
+     }*/
     
     init(  title: String, description: String, timeStamp: Date) {
         
@@ -31,10 +31,10 @@ public class Prayer {
 
     }
     
-  /*  convenience init(name: String, description: String) {
-        self.init(name:name, description:description)
+   convenience init(name: String, description: String, timeStamp: Date ) {
+        self.init(name:name, description:description,timeStamp:timeStamp)
 
-    }*/
+    }
     
 }
 
