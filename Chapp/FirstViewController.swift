@@ -20,7 +20,7 @@ class FirstViewController : UIViewController{
 
     }
 
-/*
+
     @IBAction func logOut(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -45,12 +45,12 @@ class FirstViewController : UIViewController{
         imageView.image = image
         
         navigationItem.titleView = imageView
-  */
+ 
         
        /* super.viewDidAppear(animated){
             checkLocationAuthorizationStatus()
         }*/
-  //  }
+    }
     
 }
 

@@ -128,10 +128,15 @@ class PrayerTableViewController: UITableViewController {
                         pvc.prayer = data[indexPath.row]
                     }
                 }
-                
             }
         }
-        
     }
-
 }
+
+
+
+
+
+
+
+
