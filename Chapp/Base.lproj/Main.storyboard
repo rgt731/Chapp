@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTu-eq-tOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122.40000000000001" y="-4.0479760119940034"/>
+            <point key="canvasLocation" x="-52" y="-4"/>
         </scene>
         <!--Announcement Table View Controller-->
         <scene sceneID="KuN-ol-X9H">
@@ -139,8 +139,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="balloons" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-hL-YRi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloons" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-hL-YRi">
                                 <rect key="frame" x="0.0" y="85" width="367" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="367" id="zDw-QH-MJP"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRf-Ua-VJP">
                                 <rect key="frame" x="16" y="423" width="343" height="156"/>
@@ -297,24 +300,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prayerCell" rowHeight="238" id="fC7-Vm-dpF" customClass="PrayerTableViewCell" customModule="Chapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="238"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prayerCell" rowHeight="343" id="fC7-Vm-dpF" customClass="PrayerTableViewCell" customModule="Chapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="343"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fC7-Vm-dpF" id="fcv-ll-jFF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="237.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="342.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-sB-JUr">
-                                            <rect key="frame" x="16" y="11" width="343" height="216"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="321"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUE-36-F8B">
-                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="108"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="160.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tP-Ro-oHC">
-                                                    <rect key="frame" x="0.0" y="108" width="92" height="108"/>
+                                                    <rect key="frame" x="0.0" y="160.5" width="92" height="160.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -383,11 +386,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostRecent" id="ITQ-NK-xiM"/>
                     <navigationItem key="navigationItem" id="u9e-Vi-95z">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="zbX-Co-QXK">
-                            <connections>
-                                <action selector="logOut:" destination="qiQ-zT-DLt" id="y8M-1D-2z4"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="zbX-Co-QXK"/>
                     </navigationItem>
                     <connections>
                         <outlet property="prayerDescription" destination="adO-Ck-WQj" id="HN9-Qu-Nh5"/>
