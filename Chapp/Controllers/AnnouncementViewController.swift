@@ -14,7 +14,8 @@ class AnnouncementViewController: UIViewController {
     
     @IBOutlet weak var announcementViewImage: UIImageView!
     @IBOutlet weak var announcementViewTitle: UILabel!
-    @IBOutlet weak var announcementViewDescription: UILabel!
+    @IBOutlet weak var announcementViewDescription: UITextView!
+    
     
     //title, descript, timeStamp, imagName
     override func viewDidLoad() {

@@ -13,7 +13,8 @@ class PrayerViewController: UIViewController {
     var prayer: Prayer?
     
     @IBOutlet weak var prayerTitle: UILabel!
-    @IBOutlet weak var prayerDescription: UILabel!
+    @IBOutlet weak var prayerDescription: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

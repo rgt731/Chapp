@@ -44,11 +44,13 @@ class DataSet {
     //Announcements
     //title, descript, timeStamp, imagName
     static let announcementData = [
-        Announcement(title: "NewsTitle 1", description: "Need help with hurricane releief", timeStamp: makeDate(year: 2017, month: 3, day: 14)!, imageName: "balloons.jpg"),
-         Announcement(title: "NewsTitle 2", description: "Need help with distaster releief", timeStamp: makeDate(year: 2017, month: 4, day: 15)!, imageName: "balloons.jpg"),
-          Announcement(title: "NewsTitle 3", description: "Need help tutoring?", timeStamp: makeDate(year: 2017, month: 5, day: 16)!, imageName: "balloons.jpg"),
-           Announcement(title: "NewsTitle 4", description: "Need somputer science Majors", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "balloons.jpg"),
-        Announcement(title: "NewsTitle 5", description: "Looking for making music Applications", timeStamp: makeDate(year: 2017, month: 8, day: 18)!, imageName: "balloons.jpg")
+        Announcement(title: "China Now", description: "Need volunteers for China Now. Contact David Powell", timeStamp: makeDate(year: 2017, month: 3, day: 14)!, imageName: "hand.jpeg"),
+        Announcement(title: "Graduation", description: "Seniors Need to turn in their graduation letter before Febuary 1. Contact Jared Gott for more details. ", timeStamp: makeDate(year: 2017, month: 4, day: 15)!, imageName: "graduation.jpeg"),
+        Announcement(title: "Study Abroad", description: "Applications are due by March 15. Contact Cliff Thompson for details. ", timeStamp: makeDate(year: 2017, month: 5, day: 16)!, imageName: "travel.jpeg"),
+        Announcement(title: "Starbucks", description: "Starbucks is hiring. Contact Richard England for an application. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "coffee.jpeg"),
+        Announcement(title: "Photography", description: "The photography department is looking for models for a shoot. Contact Jud Davis for more information. ", timeStamp: makeDate(year: 2017, month: 8, day: 18)!, imageName: "camera.jpeg"),
+        Announcement(title: "Mission Trip", description: "Looking for volunteers for a mission trip to Haiti. Contact Billy Smith for details. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "sunset.jpeg"),
+        Announcement(title: "Makin Music", description: "Making Music Apllications are due by January 28. Please give to Tony Allen. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "balloons.jpg")
     ];
     
     //Particpants
