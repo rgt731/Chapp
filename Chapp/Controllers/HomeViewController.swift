@@ -10,14 +10,19 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-
+   //image to show failure or success
+    @IBOutlet weak var failSuccessImage: UIImageView!
+    
+    //actual check in button
     @IBOutlet weak var checkInButtion: UIButton!
     
-    
+    //function for when the check in button is clicked
     @IBAction func homeButtonClicked(_ sender: UIButton) {
         
-      //  checkInButtion.currentImage = UIImage(named: "intro.image.jpg")
+       // checkInButtion.currentImage = UIImage(named: "button-click.png")
+       // checkInButtion.image = UIImage(named: "button-click.png") //this should have worked
              //   mainImage.image = UIImage(named: "intro.image.jpg")
+        
     }
     
     override func viewDidLoad() {
@@ -28,6 +33,12 @@ class HomeViewController: UIViewController {
         let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:80, height: 80))
         imageView.contentMode = .scaleAspectFill // set imageview's content mode
         
+        //change back button color?
+       // navigationController?.navigationBar.barTintColor = .purple
+       // navigationController?.navigationBar.tintColor = .white
+     //   [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+ 
+        
         let image = UIImage(named: "chapel")!
         imageView.image = image
         
@@ -35,6 +46,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -21,13 +21,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //text
         //navigationBarAppearace.tintColor = UIColor(red: 227, green: 223, blue: 223, alpha: 1.0)
-        //background
+        
+        //background top navigation
+        //  UINavigationBar.appearance().barTintColor = UIColor.blue
         navigationBarAppearace.barTintColor = UIColor(red: 148/255.0, green: 0/255.0, blue: 63/255.0, alpha: 1.0)
+        
+        //background bottom navigation changed in MainTabController
+        ///
         
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        //change back button text
+        let newFont = UIFont(name: "Avenir Next", size: 18.0)!
+        let color = UIColor.white
         
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.classForCoder() as! UIAppearanceContainer.Type]).setTitleTextAttributes([NSAttributedStringKey.foregroundColor: color, NSAttributedStringKey.font: newFont], for: .normal)
+        
+        //change back button color
+        self.window?.tintColor = UIColor.white
+     
+        
+   
+ 
+        
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
+   
         return true
     }
 

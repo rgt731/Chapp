@@ -15,6 +15,14 @@ class MainTabController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad() 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //set bottom of navigation background color
+        self.tabBar.barTintColor = UIColor.init(red: 148/255.0, green: 0/255.0, blue: 63/255.0, alpha: 1.0)
+ 
+    }
 }
 
 

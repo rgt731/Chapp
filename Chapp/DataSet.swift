@@ -28,17 +28,17 @@ class DataSet {
     //Prayers
     //title, description, timestamp
     static let prayerData = [
-        Prayer( title: "Title 1", description: "I need help", timeStamp: makeDate(year: 2017, month: 3, day: 19)!),
-        Prayer( title: "Title 2",  description: "I need love", timeStamp: makeDate(year: 2017, month: 3, day: 19)!),
-        Prayer( title: "Title 3", description: "I need faith", timeStamp: makeDate(year: 2017, month: 3, day: 20)!),
-        Prayer( title: "Title 4", description: "I need hope", timeStamp: makeDate(year: 2017, month: 4, day: 1)!),
-        Prayer( title: "Title 5", description: "I need love", timeStamp: makeDate(year: 2017, month: 5, day: 2)!),
-        Prayer( title: "Title 6", description: "I need guideance", timeStamp: makeDate(year: 2017, month: 6, day: 3)!),
-        Prayer( title: "Title 7", description: "I need understanding", timeStamp: makeDate(year: 2017, month: 7, day: 4)!),
-        Prayer( title: "Title 8", description: "I need money", timeStamp: makeDate(year: 2017, month: 8, day: 2017)!),
-        Prayer( title: "Title 9", description: "I need direction", timeStamp: makeDate(year: 2017, month: 9, day: 5)!),
-        Prayer( title: "Title 10", description: "I need a better gpa", timeStamp: makeDate(year: 2017, month: 10, day: 6)!),
-        Prayer( title: "Title 11", description: "I need Jesus", timeStamp: makeDate(year: 2017, month: 11, day: 8)!),
+        Prayer( title: "Prayers", description: "Please pray for Paul Methvin, grandfather of Sunni Hooper.  He will have surgery this morning.", timeStamp: makeDate(year: 2017, month: 3, day: 19)!),
+        Prayer( title: "Prayers",  description: "Please pray for Hunter Jackson and his family since the death of his grandfather this past week.", timeStamp: makeDate(year: 2017, month: 3, day: 19)!),
+            Prayer( title: "Maples", description: "Jessica and Dustin Kettlewell’s grandmother, Betty Yoho passed away.  Please keep the Kettelwell and Yoho families in prayer.", timeStamp: makeDate(year: 2017, month: 3, day: 20)!),
+            Prayer( title: "Gomex", description: "Aunt of Felicia Gomez passed away.", timeStamp: makeDate(year: 2017, month: 4, day: 1)!),
+            Prayer( title: "Roberts", description: "Nathan Roberts Great Grandmother passed away early this morning.", timeStamp: makeDate(year: 2017, month: 5, day: 2)!),
+            Prayer( title: "Selbe", description: "Ben and Emily Selbe - Ben's grandfather, Ben Hancock passed away", timeStamp: makeDate(year: 2017, month: 6, day: 3)!),
+            Prayer( title: "Johnson", description: "Steve Johnson is in the hospital in London (FHU Study Abroad program leader)", timeStamp: makeDate(year: 2017, month: 7, day: 4)!),
+            Prayer( title: "Hurricane", description: "Please pray for Louisiana and Texas during the coming days with the aftermath of Hurricane Harvey.", timeStamp: makeDate(year: 2017, month: 8, day: 2017)!),
+            Prayer( title: "Recovery", description: "Gayle McDonald is recovering from surgery.", timeStamp: makeDate(year: 2017, month: 9, day: 5)!),
+            Prayer( title: "Prayers Needed", description: "Burnette Chapel church of Christ", timeStamp: makeDate(year: 2017, month: 10, day: 6)!),
+            Prayer( title: "Kinninghams", description: "Alan Kinningham’s father passed away", timeStamp: makeDate(year: 2017, month: 11, day: 8)!),
     ];
     
     //Announcements
