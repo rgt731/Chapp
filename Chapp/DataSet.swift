@@ -43,14 +43,24 @@ class DataSet {
     
     //Announcements
     //title, descript, timeStamp, imagName
-    static let announcementData = [
-        Announcement(title: "China Now", description: "Need volunteers for China Now. Contact David Powell", timeStamp: makeDate(year: 2017, month: 3, day: 14)!, imageName: "hand.jpeg"),
+   /* static let announcementData = [
+        Announcement(title: "China Now", description: "Need volunteers for China Now. Contact David Powell. ", timeStamp: makeDate(year: 2017, month: 3, day: 14)!, imageName: "hand.jpeg"),
         Announcement(title: "Graduation", description: "Seniors Need to turn in their graduation letter before Febuary 1. Contact Jared Gott for more details. ", timeStamp: makeDate(year: 2017, month: 4, day: 15)!, imageName: "graduation.jpeg"),
         Announcement(title: "Study Abroad", description: "Applications are due by March 15. Contact Cliff Thompson for details. ", timeStamp: makeDate(year: 2017, month: 5, day: 16)!, imageName: "travel.jpeg"),
         Announcement(title: "Starbucks", description: "Starbucks is hiring. Contact Richard England for an application. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "coffee.jpeg"),
         Announcement(title: "Photography", description: "The photography department is looking for models for a shoot. Contact Jud Davis for more information. ", timeStamp: makeDate(year: 2017, month: 8, day: 18)!, imageName: "camera.jpeg"),
-        Announcement(title: "Mission Trip", description: "Looking for volunteers for a mission trip to Haiti. Contact Billy Smith for details. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "sunset.jpeg"),
+        Announcement(title: "Mission Trip", description: "Looking for volunteers for a mission trip to Haiti. Contact Billy Smith for details. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName:"sunset.jpeg"),
         Announcement(title: "Makin Music", description: "Making Music Apllications are due by January 28. Please give to Tony Allen. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "balloons.jpg")
+    ];*/
+    
+    static let announcementData = [
+        Announcement(title: "China Now", description: "Bob", timeStamp: makeDate(year: 2017, month: 3, day: 14)!, imageName: "hand.jpeg"),
+        Announcement(title: "Graduation", description: "Bob2 ", timeStamp: makeDate(year: 2017, month: 4, day: 15)!, imageName: "graduation.jpeg"),
+        Announcement(title: "Study Abroad", description: "Bob3", timeStamp: makeDate(year: 2017, month: 5, day: 16)!, imageName: "travel.jpeg"),
+        Announcement(title: "Starbucks", description: "Bob4", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "coffee.jpeg"),
+        Announcement(title: "Photography", description: "Bob5 ", timeStamp: makeDate(year: 2017, month: 8, day: 18)!, imageName: "camera.jpeg"),
+        Announcement(title: "Mission Trip", description: "Bob6 ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName:"sunset.jpeg"),
+        Announcement(title: "Makin Music", description: "Bob7 ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "balloons.jpg")
     ];
     
     //Particpants

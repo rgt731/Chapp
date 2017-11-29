@@ -44,7 +44,11 @@ class HomeViewController: UIViewController {
         
         navigationItem.titleView = imageView
 
-        // Do any additional setup after loading the view.
+     
+        //round button off when loading view
+        //checkInButtion.layer.cornerRadius = 5.0
+
+        
     }
     
 
@@ -53,7 +57,22 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //handle if user successfully checked in
+    private func handleCheckInSuccess(){
+        let alert = UIAlertController(title: "Check In Success!", message: "You have successfully checked in!", preferredStyle : .alert)
+        present(alert, animated: true)
+        alert.addAction(UIAlertAction(title: "OK", style :.default, handler: nil))
+        
+    }
+    
+    
+   //handle if user did NOT check in
+    private func handleCheckInFailure(){
+        let alert = UIAlertController(title: "Check In Failure!", message: "There was an issue checking in!", preferredStyle : .alert)
+        present(alert, animated: true)
+        alert.addAction(UIAlertAction(title: "OK", style :.default, handler: nil))
+    }
+    
     /*
     // MARK: - Navigation
 

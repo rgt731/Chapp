@@ -15,11 +15,15 @@ class AnnouncementViewController: UIViewController {
     @IBOutlet weak var announcementViewImage: UIImageView!
     @IBOutlet weak var announcementViewTitle: UILabel!
     @IBOutlet weak var announcementViewDescription: UITextView!
-    
-    
+     
     //title, descript, timeStamp, imagName
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if announcementViewDescription.text == nil {
+            announcementViewDescription.text = " "
+        }
+        
         
         announcementViewTitle.text = announcement?.title
         announcementViewDescription.text = announcement?.description
