@@ -10,7 +10,6 @@ import UIKit
 
 class PrayerTableViewCell: UITableViewCell {
     @IBOutlet weak var PrayerTitle: UILabel!
-    @IBOutlet weak var PrayerDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

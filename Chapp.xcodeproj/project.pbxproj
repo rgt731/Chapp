@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D05C8E11FD07345005EDC6E /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05C8E01FD07345005EDC6E /* CheckInViewController.swift */; };
+		5D05C8E31FD0C27B005EDC6E /* ParticipantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05C8E21FD0C27B005EDC6E /* ParticipantTableViewController.swift */; };
 		5D60809F1FBE89FE00019081 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60809E1FBE89FE00019081 /* ParticipantTableViewCell.swift */; };
 		5D6080A11FBE90C300019081 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A01FBE90C300019081 /* PrayerTableViewCell.swift */; };
 		5D6080A31FBE90D600019081 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6080A21FBE90D600019081 /* AnnouncementTableViewCell.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D05C8E01FD07345005EDC6E /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		5D05C8E21FD0C27B005EDC6E /* ParticipantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewController.swift; sourceTree = "<group>"; };
 		5D60809E1FBE89FE00019081 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		5D6080A01FBE90C300019081 /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
 		5D6080A21FBE90D600019081 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,9 +84,11 @@
 				5DD79F901FB217C000EC0D81 /* LoginViewController.swift */,
 				5D6080AA1FBF4DC000019081 /* PrayerViewController.swift */,
 				5D6080AC1FBF4DE800019081 /* PrayerTableViewController.swift */,
+				5D05C8E21FD0C27B005EDC6E /* ParticipantTableViewController.swift */,
 				5D6080A81FBEA33800019081 /* AnnouncementViewController.swift */,
 				5D6080A61FBEA10600019081 /* AnnouncementTableViewController.swift */,
 				5D6080B31FBF7C0700019081 /* HomeViewController.swift */,
+				5D05C8E01FD07345005EDC6E /* CheckInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 				5D6080A31FBE90D600019081 /* AnnouncementTableViewCell.swift in Sources */,
 				5D6080B41FBF7C0700019081 /* HomeViewController.swift in Sources */,
 				5D6080A71FBEA10600019081 /* AnnouncementTableViewController.swift in Sources */,
+				5D05C8E31FD0C27B005EDC6E /* ParticipantTableViewController.swift in Sources */,
+				5D05C8E11FD07345005EDC6E /* CheckInViewController.swift in Sources */,
 				5D6080AB1FBF4DC000019081 /* PrayerViewController.swift in Sources */,
 				5D6080A91FBEA33800019081 /* AnnouncementViewController.swift in Sources */,
 				5DD79F8F1FB217C000EC0D81 /* AppDelegate.swift in Sources */,

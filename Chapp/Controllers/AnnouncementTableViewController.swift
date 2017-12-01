@@ -14,10 +14,12 @@ class AnnouncementTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        data = DataSet.announcementData
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        data = DataSet.announcementData
+       
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -52,8 +54,8 @@ class AnnouncementTableViewController: UITableViewController {
                 let announcement = therealdata[indexPath.row]
                 
                 announcementCell.AnnouncementTitle?.text = announcement.title
-               // announcementCell.locationLabel?.text = villain.alias
-                //villainCell.timeLabel?.text = villain.timestamp.description
+               //announcementCell.
+                
                 if let imageName = announcement.imageName {
                     announcementCell.backgroundImage?.image = UIImage(named: imageName)
                 }
