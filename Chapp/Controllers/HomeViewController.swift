@@ -80,6 +80,10 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+     
+        // get today's chapel program object
+        // set it as the chapelProgram member variable of the destiantion VC
+     
     }
     */
 

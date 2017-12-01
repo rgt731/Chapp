@@ -24,7 +24,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func dismissViewController(_ sender: Any) {
+    }
+    
     @IBAction func loginTapped(_ sender: Any) {
         //TODO: Here, perform log in with tabbed controller
         

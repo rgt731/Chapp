@@ -10,9 +10,13 @@ import UIKit
 
 class ParticipantTableViewController: UITableViewController {
 
+    //var chapelProgram: ChapelProgram
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        // title.text = chapelProgram.title
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,11 +33,12 @@ class ParticipantTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        //return chapelProgram.participants.count
         return 0
     }
 
@@ -43,6 +48,9 @@ class ParticipantTableViewController: UITableViewController {
 
         // Configure the cell...
 
+        cell.titleLabel.text= chapelProgram.participants[indexPath.row].name
+        cell.subtitleLabel.text = chapelProgram.participants[indexPath.row].role
+     
         return cell
     }
     */

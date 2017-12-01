@@ -11,7 +11,12 @@ import CoreLocation
 
 class CheckInViewController: UIViewController, CLLocationManagerDelegate {
 
-   
+    @IBAction func dismissViewController(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+        locationManager.stopUpdatingLocation()
+    }
+    
     /********************
       Status Indicators
      *********************/
@@ -85,10 +90,15 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         Status1.image = UIImage(named: "yes.png")
         
         let addr = getIFAddresses()
+        
+        for a in addr {
+            print(a + "\n")
+        }
+        
         if (addr.count > 0){
-                    print (addr[0])
-                    ipText.text! = addr[0]
-                  //  return true
+            print (addr[0])
+            ipText.text! = addr[0]
+            //  return true
         }else{
             print("Array has 0 items ")
             //return false
@@ -96,9 +106,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         }
 
     }
-    
-    
-    
+
     //function to get IP Address
     func getIFAddresses() -> [String] {
         var addresses = [String]()
@@ -115,7 +123,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             
             // Check for running IPv4, IPv6 interfaces. Skip the loopback interface.
             if (flags & (IFF_UP|IFF_RUNNING|IFF_LOOPBACK)) == (IFF_UP|IFF_RUNNING) {
-                if addr.sa_family == UInt8(AF_INET) || addr.sa_family == UInt8(AF_INET6) {
+                if addr.sa_family == UInt8(AF_INET) /*|| addr.sa_family == UInt8(AF_INET6)*/ {
                     
                     // Convert interface address to a human readable string:
                     var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
@@ -152,8 +160,10 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         if let location = locations.first{
             print(location.coordinate)
-
-            gpsText.text! = location.coordinate
+            let lat = String(format: "%.5f", location.coordinate.latitude)
+            gpsText.text! = "\(lat)"
+            
+            
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
 
         }
