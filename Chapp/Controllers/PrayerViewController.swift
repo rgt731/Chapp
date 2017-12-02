@@ -11,7 +11,7 @@ import UIKit
 class PrayerViewController: UIViewController {
     
     var prayer: Prayer?
-    
+
     @IBOutlet weak var prayerTitle: UILabel!
     @IBOutlet weak var prayerDescription: UITextView!
     

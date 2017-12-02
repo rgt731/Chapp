@@ -29,13 +29,16 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var Status3: UIImageView!
     
     
+    
     /********************
          Test Text
     *********************/
     //label for testing purposes - show current IP Address
     @IBOutlet weak var ipText: UILabel!
     //Label for testing purposes - show current GPS location
-    @IBOutlet weak var gpsText: UILabel!
+    @IBOutlet weak var gpsTextLat: UILabel!
+    @IBOutlet weak var gpsTextLong: UILabel!
+    
     
     
     let locationManager =  CLLocationManager()
@@ -49,21 +52,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         //check location status
         checkLocation()
-        
-        //request access to location
-        //for when the app is open and in the background
-        locationManager.requestAlwaysAuthorization()
-        
-        //for when app is open
-        // locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled()
-        {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        
         
         //check both are corect
         checkLocationWifi()
@@ -86,11 +74,31 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     //A: Did user have the correct Wifi IP Address?
     func checkWifi(){
         
-        Status1.isHidden = false
-        Status1.image = UIImage(named: "yes.png")
-        
         let addr = getIFAddresses()
+       // let myFloat = (addr as String).doubleValue
+       // let width = NSString(string: addr).doubleValue
+
+        let first4 = addr[0].prefix(4)
+
+        print("first four letters of ip address are: ", first4)
         
+        Status1.isHidden = false
+        
+        //authentication
+        if ( first4 == "10.5")
+        {
+        
+            Status1.image = UIImage(named: "yes.png")
+        }
+        else{
+        
+            Status1.image = UIImage(named: "no.png")
+        }
+ 
+        
+        
+        
+        //debugging
         for a in addr {
             print(a + "\n")
         }
@@ -148,21 +156,54 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     
     //B: Is the User in the right location?
     func checkLocation(){
-        Status2.isHidden = true
+        
+        //request access to location
+        //for when the app is open and in the background
+        locationManager.requestAlwaysAuthorization()
+        
+        //for when app is open
+        // locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled()
+        {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        //authentication
+        
+        Status2.isHidden = false
+        
+        
         
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-       
+       /*
         var locValue:CLLocationCoordinate2D = manager.location!.coordinate
         var lat : String = locValue.latitude.description
         var lng : String = locValue.longitude.description
+        */
         
         if let location = locations.first{
             print(location.coordinate)
-            let lat = String(format: "%.5f", location.coordinate.latitude)
-            gpsText.text! = "\(lat)"
             
+            //format lat and long
+            let lat = String(format: "%.4f", location.coordinate.latitude)
+            let long = String(format: "%.4f", location.coordinate.longitude)
+            
+            //assign lat and long to check in status
+            gpsTextLat.text! = "\(lat)"
+            gpsTextLong.text! = "\(long)"
+            
+            if (lat == "35.4384" && long == "-88.6377"){
+                print ("That is the CORRECT Coordinates")
+                Status2.image = UIImage(named: "yes.png")
+            }else{
+                 Status2.image = UIImage(named: "no.png")
+                       print ("Nope, Coordinates not right")
+            }
             
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
 
