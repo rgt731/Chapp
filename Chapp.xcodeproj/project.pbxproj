@@ -25,7 +25,6 @@
 		5DD79F991FB217C000EC0D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD79F971FB217C000EC0D81 /* LaunchScreen.storyboard */; };
 		5DD79FA11FB24AEB00EC0D81 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA01FB24AEB00EC0D81 /* DataSet.swift */; };
 		5DD79FA31FB29A0600EC0D81 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */; };
-		5DD79FA51FB2AB0100EC0D81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */; };
 		5DD79FA71FB2B4F900EC0D81 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */; };
 		5DD79FA91FB2BADB00EC0D81 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD79FA81FB2BADB00EC0D81 /* Announcement.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,6 @@
 		5DD79F9A1FB217C000EC0D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DD79FA01FB24AEB00EC0D81 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		5DD79FA21FB29A0600EC0D81 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
-		5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5DD79FA61FB2B4F900EC0D81 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		5DD79FA81FB2BADB00EC0D81 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +129,6 @@
 				5DD79F951FB217C000EC0D81 /* Assets.xcassets */,
 				5DD79F971FB217C000EC0D81 /* LaunchScreen.storyboard */,
 				5DD79F9A1FB217C000EC0D81 /* Info.plist */,
-				5DD79FA41FB2AB0100EC0D81 /* FirstViewController.swift */,
 			);
 			path = Chapp;
 			sourceTree = "<group>";
@@ -212,7 +209,6 @@
 				5D6080A11FBE90C300019081 /* PrayerTableViewCell.swift in Sources */,
 				5D6080AF1FBF5E7700019081 /* Participant.swift in Sources */,
 				5DD79FA71FB2B4F900EC0D81 /* Prayer.swift in Sources */,
-				5DD79FA51FB2AB0100EC0D81 /* FirstViewController.swift in Sources */,
 				5DD79FA11FB24AEB00EC0D81 /* DataSet.swift in Sources */,
 				5D60809F1FBE89FE00019081 /* ParticipantTableViewCell.swift in Sources */,
 				5DD79F911FB217C000EC0D81 /* LoginViewController.swift in Sources */,

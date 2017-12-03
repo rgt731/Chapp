@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
         
 
- 
         
         
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]

@@ -55,8 +55,16 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         //check both are corect
         checkLocationWifi()
+        
+        
+        //draw a line
+        // Add a green line with thickness 1, width 200 at location (50, 100)
+        //y is up/down x is left/right
+        let line = UIView(frame: CGRect(x: 50, y: 375, width: 300, height: 1))
+        line.backgroundColor = UIColor.black
+        self.view.addSubview(line)
 
-   
+    
     }
 
     
@@ -219,7 +227,14 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     //C: Are both A and B correct?
     func checkLocationWifi(){
         Status3.isHidden = false
-        Status3.image = UIImage(named: "no.png")
+        
+        /*
+        if (wifiStatus == locationStatus){
+                    Status3.image = UIImage(named: "yes.png")
+        }else{
+                    Status3.image = UIImage(named: "no.png")
+        }*/
+         Status3.image = UIImage(named: "yes.png")
     }
     
     
@@ -234,5 +249,14 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+   
+    
+    
+    
+    
+    
+    
 
 }

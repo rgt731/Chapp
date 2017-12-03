@@ -40,6 +40,10 @@ class PrayerTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
          return data?.count ?? 0
     }
+    
+    
+
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,9 +54,16 @@ class PrayerTableViewController: UITableViewController {
         if let prayerCell = cell as? PrayerTableViewCell {
             if let therealdata = data {
                 let prayer = therealdata[indexPath.row]
+               
+                //convert date of prayer to a string
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MMM dd, YYYY"
+                let dateString = dateFormatter.string(from: prayer.timeStamp!)
+                
                 
                 prayerCell.PrayerTitle?.text = prayer.title
                // prayerCell.PrayerDescription?.text = prayer.description
+                prayerCell.PrayerDate?.text = dateString
                 
                 // announcementCell.locationLabel?.text = villain.alias
                 //prayerCell.timeLabel?.text = prayer.timestamp.description

@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    //fields for username and password
+    @IBOutlet weak var userNameTextbox: UITextField!
+    @IBOutlet weak var passwordTextBox: UITextField!
+    @IBOutlet weak var errorMessageIndicator: UILabel!
+    
+    
     //outlet for login button when app loads up
     @IBOutlet weak var loginButton: UIButton!
     
@@ -17,6 +23,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loginButton.layer.cornerRadius = 5.0
+       // self.hideKeyboardWhenTappedAround()
+        errorMessageIndicator.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,11 +38,36 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         //TODO: Here, perform log in with tabbed controller
         
+        //indicates which tab bar icon is intiaially highlighted and displayed
         let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        
+        //change index from first tab to middle - last one
         mainTabController.selectedViewController = mainTabController.viewControllers?[1]
         present(mainTabController, animated: true, completion: nil)
         
-        //change index from first stab to middle - last one             
+        
+        //authenticate username and password
+        let username = "username"
+        let password = "password"
+        
+        if userNameTextbox.text == username && passwordTextBox.text == password
+        {
+            errorMessageIndicator.isHidden = true
+            let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+            
+            mainTabController.selectedViewController = mainTabController.viewControllers?[1]
+            
+            present(mainTabController, animated: true, completion: nil)
+        }
+        else
+        {
+            errorMessageIndicator.isHidden = false
+            errorMessageIndicator.text = " Incorrect Username or Password"
+            userNameTextbox.resignFirstResponder()
+            passwordTextBox.resignFirstResponder()
+            
+        }
+
         
     }
     
