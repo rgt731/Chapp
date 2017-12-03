@@ -25,7 +25,7 @@ class MainTabController : UITabBarController {
         
         
         
-        
+       /*
         //set icon at top of page
         let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:80, height: 80))
         imageView.contentMode = .scaleAspectFit // set imageview's content mode
@@ -33,7 +33,7 @@ class MainTabController : UITabBarController {
         let image = UIImage(named: "homeLogo.png")!
         imageView.image = image
         
-        navigationItem.titleView = imageView
+        navigationItem.titleView = imageView*/
  
     }
 }

@@ -35,7 +35,7 @@ class DataSet {
             Prayer( title: "Roberts Family", description: "Nathan Roberts Great Grandmother passed away early this morning.", timeStamp: makeDate(year: 2017, month: 5, day: 2)!),
             Prayer( title: "Selbe Family", description: "Ben and Emily Selbe - Ben's grandfather, Ben Hancock passed away", timeStamp: makeDate(year: 2017, month: 6, day: 3)!),
             Prayer( title: "Johnson Family", description: "Steve Johnson is in the hospital in London (FHU Study Abroad program leader)", timeStamp: makeDate(year: 2017, month: 7, day: 4)!),
-            Prayer( title: "Hurricane", description: "Please pray for Louisiana and Texas during the coming days with the aftermath of Hurricane Harvey.", timeStamp: makeDate(year: 2017, month: 8, day: 2017)!),
+            Prayer( title: "Hurricane", description: "Please pray for Louisiana and Texas during the coming days with the aftermath of Hurricane Harvey.", timeStamp: makeDate(year: 2017, month: 8, day: 12)!),
             Prayer( title: "McDonald Recovery", description: "Gayle McDonald is recovering from surgery.", timeStamp: makeDate(year: 2017, month: 9, day: 5)!),
             Prayer( title: "Prayers Needed", description: "Burnette Chapel church of Christ", timeStamp: makeDate(year: 2017, month: 10, day: 6)!),
             Prayer( title: "Kinningham Family", description: "Alan Kinningham’s father passed away", timeStamp: makeDate(year: 2017, month: 11, day: 8)!),

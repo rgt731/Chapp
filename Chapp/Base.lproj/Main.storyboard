@@ -260,7 +260,7 @@
                                                     <constraint firstAttribute="height" constant="150" id="gxn-fP-r5j"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="Lrc-Br-Zt9" kind="show" id="nWA-X6-Z9y"/>
+                                                    <segue destination="Lrc-Br-Zt9" kind="show" identifier="participantSegue" id="nWA-X6-Z9y"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L9-bb-TH7">
