@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import CoreLocation
 
 class CheckInViewController: UIViewController, CLLocationManagerDelegate {
@@ -40,8 +41,14 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var gpsTextLong: UILabel!
     
     
-    
+    /********************
+             Map
+     *********************/
+    //the actual map
+    @IBOutlet weak var map: MKMapView!
     let locationManager =  CLLocationManager()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +70,14 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         let line = UIView(frame: CGRect(x: 50, y: 375, width: 300, height: 1))
         line.backgroundColor = UIColor.black
         self.view.addSubview(line)
+        
+        
+        
+        func centerOnLocation(location: CLLocationCoordinate2D) {
+            let regionRadius: CLLocationDistance = 1000
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, regionRadius, regionRadius)
+            map.setRegion(coordinateRegion, animated: true)
+        }
 
     
     }
@@ -82,26 +97,46 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     //A: Did user have the correct Wifi IP Address?
     func checkWifi(){
         
+        Status1.isHidden = false
         let addr = getIFAddresses()
        // let myFloat = (addr as String).doubleValue
        // let width = NSString(string: addr).doubleValue
-
         let first4 = addr[0].prefix(4)
-
+        let double_1 : Double = (first4 as NSString).doubleValue
+        //let type = type(of: value)
+  
         print("first four letters of ip address are: ", first4)
+        print("first four letters of ip address are: ", double_1, "Its type is ", double_1)
         
-        Status1.isHidden = false
+
         
+        
+        // Create a range and authenticate
+        let contains = (10.6...10.81).contains(double_1)
+        if (contains == true){
+                print("True")
+                Status1.image = UIImage(named: "yes.png")
+        }else{
+            print("Not True")
+            Status1.image = UIImage(named: "no.png")
+        }
+        
+        /*
         //authentication
-        if ( first4 == "10.5")
+        if ( first4 == "10.5" || first4 == "10.6")
         {
+            if(double_1 == 10.5){
+                print("This is an int: ", double_1)
+            }else{
+                    print("This is NOT an int: ", double_1)
+            }
         
             Status1.image = UIImage(named: "yes.png")
         }
         else{
         
             Status1.image = UIImage(named: "no.png")
-        }
+        }*/
  
         
         
@@ -175,7 +210,10 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled()
         {
             locationManager.delegate = self
+            //need accurate data
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            //get user location when user is using app
+            locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
         
@@ -214,8 +252,14 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
-
         }
+        /*
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        //let myLocation:CCLocationCoordinate2D = CCLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(locations.first, span)
+        map.setRegion(region, animated: true)
+        self.map.showsUserLocation = true
+        */
     }
     
     

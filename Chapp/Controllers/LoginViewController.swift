@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 5.0
        // self.hideKeyboardWhenTappedAround()
         errorMessageIndicator.isHidden = true
+        
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,9 +77,26 @@ class LoginViewController: UIViewController {
     
     
     
-    
-    
-    
+}
+
+//this extension will make the keyboard dissappear on touch and alert messages
+extension UIViewController{
+    func hideKeyboardWhenTappedAround(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIViewController.dismissKeyBoard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+      
+    @objc func dismissKeyBoard(){
+        view.endEditing(true)
+    }
     
 }
+
+
+
+
+
+
+
 
