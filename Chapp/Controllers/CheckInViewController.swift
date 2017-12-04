@@ -112,6 +112,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         
         // Create a range and authenticate
+        //range should be  - 10.5.32.0/19.
         let contains = (10.6...10.81).contains(double_1)
         if (contains == true){
                 print("True")
