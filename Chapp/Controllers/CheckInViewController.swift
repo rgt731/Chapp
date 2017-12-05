@@ -18,8 +18,8 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
-    var wifiWassuccessful = false
-    var locationWassuccessful = false
+    var wifiWasSuccessful = false
+    var locationWasSuccessful = false
 
     
     
@@ -121,6 +121,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         if (contains == true){
                 print("\n You are on the correct IP Address ", double_1, "\n")
                 Status1.image = UIImage(named: "yes.png")
+                wifiWasSuccessful = true
         }else{
                print("\n You are on the wrong IP Address ", double_1, "\n")
             Status1.image = UIImage(named: "no.png")
@@ -148,9 +149,9 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         //debugging
       
-        for a in addr {
+       /* for a in addr {
           //  print(a + "\n")
-        }
+        }*/
         
         if (addr.count > 0){
            // print (addr[0])
@@ -255,6 +256,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             if (lat == "35.439" && long == "-88.638"){
                 print ("That is the CORRECT Coordinates ", lat, long, "\n")
                 Status2.image = UIImage(named: "yes.png")
+                locationWasSuccessful = true
             }else{
                  Status2.image = UIImage(named: "no.png")
                        print ("Nope, Coordinates not right ", lat, long, "\n")
@@ -268,10 +270,21 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             self.map.showsUserLocation = true
             
             
+            //set where loyd is
+            let chapelLocation = CLLocationCoordinate2DMake(35.4384, -88.6377)
+            // Drop a pin
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = chapelLocation
+            dropPin.title = "Loyd"
+            /* dropPin.canShowCallOut = true
+            dropPin.calloutOffset = CGPoint(x: -5, y : 5)
+            dropPin.rightCalloutAccessoryView = UIButton( type: .detailDisclosure)
+            dropPin.markerTintColor = blue
+            dropPin.glyphImage = UIImage(named: "chevron-icon")*/
+            map.addAnnotation(dropPin)
+           
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
         }
-        
-       
     }
     
     
@@ -284,12 +297,12 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     func checkLocationWifi(){
         Status3.isHidden = false
         
-        /*
-        if (wifiStatus == locationStatus){
+        
+        if (wifiWasSuccessful == true && locationWasSuccessful == true){
                     Status3.image = UIImage(named: "yes.png")
         }else{
                     Status3.image = UIImage(named: "no.png")
-        }*/
+        }
          Status3.image = UIImage(named: "yes.png")
     }
     
