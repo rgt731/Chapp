@@ -30,19 +30,30 @@ class HomeViewController: UIViewController {
        // navigationController?.navigationBar.barTintColor = .red
         
         
-        let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:80, height: 80))
+        //adding image in top nav bar
+       /*  let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:80, height: 80))
+           imageView.contentMode = .scaleAspectFill // set imageview's content mode
+           let image = UIImage(named: "chapel")!
+           imageView.image = image
+         
+            navigationItem.titleView = imageView
+         */
+        
+        //adding image in top nav bar
+       /* let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:0, height: 0))
         imageView.contentMode = .scaleAspectFill // set imageview's content mode
-        
-        //change back button color?
-       // navigationController?.navigationBar.barTintColor = .purple
-       // navigationController?.navigationBar.tintColor = .white
-     //   [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
- 
-        
-        let image = UIImage(named: "chapel")!
+        let image = UIImage(named: "login")!
         imageView.image = image
         
-        navigationItem.titleView = imageView
+        navigationItem.titleView = imageView*/
+        
+       //change back button color?
+       // navigationController?.navigationBar.barTintColor = .purple
+       // navigationController?.navigationBar.tintColor = .white
+       //   [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+ 
+        
+
 
      
         //round button off when loading view

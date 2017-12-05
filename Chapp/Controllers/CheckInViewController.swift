@@ -18,6 +18,11 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
+    var wifiWassuccessful = false
+    var locationWassuccessful = false
+
+    
+    
     /********************
       Status Indicators
      *********************/
@@ -35,6 +40,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
          Test Text
     *********************/
     //label for testing purposes - show current IP Address
+  //  @IBOutlet weak var ipText: UILabel!
     @IBOutlet weak var ipText: UILabel!
     //Label for testing purposes - show current GPS location
     @IBOutlet weak var gpsTextLat: UILabel!
@@ -53,7 +59,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //check wifi status
         checkWifi()
         
@@ -63,16 +68,15 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         //check both are corect
         checkLocationWifi()
         
-        
         //draw a line
         // Add a green line with thickness 1, width 200 at location (50, 100)
         //y is up/down x is left/right
-        let line = UIView(frame: CGRect(x: 50, y: 375, width: 300, height: 1))
+      /*  let line = UIView(frame: CGRect(x: 50, y: 375, width: 300, height: 1))
         line.backgroundColor = UIColor.black
-        self.view.addSubview(line)
+        self.view.addSubview(line)*/
         
         
-        
+        //map
         func centerOnLocation(location: CLLocationCoordinate2D) {
             let regionRadius: CLLocationDistance = 1000
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, regionRadius, regionRadius)
@@ -105,24 +109,24 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         let double_1 : Double = (first4 as NSString).doubleValue
         //let type = type(of: value)
   
-        print("first four letters of ip address are: ", first4)
-        print("first four letters of ip address are: ", double_1, "Its type is ", double_1)
+    //    print("first four letters of ip address are: ", first4)
+    //    print("first four letters of ip address are: ", double_1, "Its type is ", double_1)
         
 
         
         
         // Create a range and authenticate
         //range should be  - 10.5.32.0/19.
-        let contains = (10.6...10.81).contains(double_1)
+        let contains = (10.5...10.5).contains(double_1)
         if (contains == true){
-                print("True")
+                print("\n You are on the correct IP Address ", double_1, "\n")
                 Status1.image = UIImage(named: "yes.png")
         }else{
-            print("Not True")
+               print("\n You are on the wrong IP Address ", double_1, "\n")
             Status1.image = UIImage(named: "no.png")
         }
         
-        /*
+        /*  
         //authentication
         if ( first4 == "10.5" || first4 == "10.6")
         {
@@ -143,12 +147,13 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         
         //debugging
+      
         for a in addr {
-            print(a + "\n")
+          //  print(a + "\n")
         }
         
         if (addr.count > 0){
-            print (addr[0])
+           // print (addr[0])
             ipText.text! = addr[0]
             //  return true
         }else{
@@ -223,7 +228,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         Status2.isHidden = false
         
         
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -232,35 +236,42 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         var lat : String = locValue.latitude.description
         var lng : String = locValue.longitude.description
         */
+        // lat :35.4384 long : -88.6377
         
         if let location = locations.first{
             print(location.coordinate)
             
             //format lat and long
-            let lat = String(format: "%.4f", location.coordinate.latitude)
-            let long = String(format: "%.4f", location.coordinate.longitude)
+            let lat = String(format: "%.3f", location.coordinate.latitude)
+            let long = String(format: "%.3f", location.coordinate.longitude)
+            
+            //compute distance between your location and the locatuion you care about
+            //once loocation doesnt change as much then we believe that you are really here
             
             //assign lat and long to check in status
             gpsTextLat.text! = "\(lat)"
             gpsTextLong.text! = "\(long)"
             
-            if (lat == "35.4384" && long == "-88.6377"){
-                print ("That is the CORRECT Coordinates")
+            if (lat == "35.439" && long == "-88.638"){
+                print ("That is the CORRECT Coordinates ", lat, long, "\n")
                 Status2.image = UIImage(named: "yes.png")
             }else{
                  Status2.image = UIImage(named: "no.png")
-                       print ("Nope, Coordinates not right")
+                       print ("Nope, Coordinates not right ", lat, long, "\n")
             }
+            
+            //center on map on user location
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+            let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+            let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+            map.setRegion(region, animated: true)
+            self.map.showsUserLocation = true
+            
             
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
         }
-        /*
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        //let myLocation:CCLocationCoordinate2D = CCLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(locations.first, span)
-        map.setRegion(region, animated: true)
-        self.map.showsUserLocation = true
-        */
+        
+       
     }
     
     

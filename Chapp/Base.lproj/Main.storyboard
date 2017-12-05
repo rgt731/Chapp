@@ -41,13 +41,6 @@
                                 <color key="textColor" red="0.57410806420000005" green="0.16647237540000001" blue="0.24604693059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G28-YE-4kY">
-                                <rect key="frame" x="133" y="529" width="102" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHz-FT-39t">
                                 <rect key="frame" x="67" y="453" width="234" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -578,8 +571,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-eM-wLs">
-                                        <rect key="frame" x="47" y="95" width="144" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY0-eM-wLs">
+                                        <rect key="frame" x="42" y="95" width="43" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
@@ -629,6 +622,13 @@
                                         <rect key="frame" x="266" y="452" width="67" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current IP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpU-Ki-eRu">
+                                        <rect key="frame" x="131" y="95" width="172" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85498909932102651" green="0.85498909932102651" blue="0.85498909932102651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -657,7 +657,7 @@
                         <outlet property="Status3" destination="DnF-3z-kt4" id="LwL-A1-hJ2"/>
                         <outlet property="gpsTextLat" destination="1Cb-QF-B1F" id="IpT-PW-qvj"/>
                         <outlet property="gpsTextLong" destination="mS4-EN-M73" id="9jb-U9-KNJ"/>
-                        <outlet property="ipText" destination="rY0-eM-wLs" id="ylo-Mc-2RM"/>
+                        <outlet property="ipText" destination="LpU-Ki-eRu" id="Vho-yd-fGs"/>
                         <outlet property="map" destination="sRI-0d-Y6Z" id="gZS-8S-Hct"/>
                     </connections>
                 </viewController>
@@ -788,6 +788,7 @@
         <image name="yes" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SBT-QY-YaZ"/>
         <segue reference="a12-JQ-QDe"/>
     </inferredMetricsTieBreakers>
 </document>

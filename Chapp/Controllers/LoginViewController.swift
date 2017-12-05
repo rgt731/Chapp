@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextBox: UITextField!
     @IBOutlet weak var errorMessageIndicator: UILabel!
     
-    
     //outlet for login button when app loads up
     @IBOutlet weak var loginButton: UIButton!
     

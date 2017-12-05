@@ -13,21 +13,17 @@ import Foundation
 
 public class ChapelProgram{
     
-    
-    
-    
     var title: String?
     var date : Date?
-  //  var particpants : Participants?
+    var particpants : [Participant]? 
     
     init(title: String, date: Date) {
         
         self.title = title
         self.date = date
+      //  self.particpant = particpant
         
     }
-    
-    
     
     
     

@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Whe need your location to check in.</string>
+	<string>We need your location to check in.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need your location to check in Always</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
