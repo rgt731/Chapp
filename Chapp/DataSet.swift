@@ -49,7 +49,7 @@ class DataSet {
         Announcement(title: "Study Abroad", description: "Applications are due by March 15. Contact Cliff Thompson for details. ", timeStamp: makeDate(year: 2017, month: 5, day: 16)!, imageName: "travel.jpeg"),
         Announcement(title: "Starbucks", description: "Starbucks is hiring. Contact Richard England for an application. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "coffee.jpeg"),
         Announcement(title: "Photography", description: "The photography department is looking for models for a shoot. Contact Jud Davis for more information. ", timeStamp: makeDate(year: 2017, month: 8, day: 18)!, imageName: "camera.jpeg"),
-        Announcement(title: "Mission Trip", description: "Looking for volunteers for a mission trip to Haiti. Contact Billy Smith for details. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName:"camera.jpeg"),
+        Announcement(title: "Mission Trip", description: "Looking for volunteers for a mission trip to Haiti. Contact Billy Smith for details. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName:"sunset2.jpeg"),
         Announcement(title: "Makin Music", description: "Making Music Apllications are due by January 28. Please give to Tony Allen. ", timeStamp: makeDate(year: 2017, month: 6, day: 17)!, imageName: "balloons.jpg")
     ];
     
