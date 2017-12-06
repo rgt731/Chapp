@@ -84,18 +84,25 @@ class HomeViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style :.default, handler: nil))
     }
     
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-     
-        // get today's chapel program object
-        // set it as the chapelProgram member variable of the destiantion VC
+    
+    // get today's chapel program object
+    // set it as the chapelProgram member variable of the destiantion VC
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+            if let identifier = segue.identifier {
+                if identifier == "participantSegue" {
+                    if let pvc = segue.destination as? ParticipantTableViewController{
+                        pvc.chapelProgram = DataSet.chapelProgramData
+                    }
+                }
+            }
+            
+  
      
     }
-    */
+ 
 
 }

@@ -15,13 +15,13 @@ public class ChapelProgram{
     
     var title: String?
     var date : Date?
-    var particpants : [Participant]? 
+    var participants : [Participant]?
     
-    init(title: String, date: Date) {
+    init(title: String, date: Date, participants: [Participant]) {
         
         self.title = title
         self.date = date
-      //  self.particpant = particpant
+        self.participants = participants
         
     }
     

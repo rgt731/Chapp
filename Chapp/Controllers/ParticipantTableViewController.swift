@@ -10,8 +10,8 @@ import UIKit
 
 class ParticipantTableViewController: UITableViewController {
 
-    //var chapelProgram: ChapelProgram
-        var data: [Participant]?
+    var chapelProgram: ChapelProgram?
+    //var data: [Participant]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +39,29 @@ class ParticipantTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //return chapelProgram.participants.count
-        return 0
+        if let participants = chapelProgram?.participants {
+            return participants.count
+        }
+        else
+        {
+            return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "participantCell", for: indexPath)
 
         // Configure the cell...
 
-        cell.titleLabel.text= chapelProgram.participants[indexPath.row].name
-        cell.subtitleLabel.text = chapelProgram.participants[indexPath.row].role
+        if let participants = chapelProgram?.participants {
+            cell.textLabel?.text = participants[indexPath.row].name
+            cell.detailTextLabel?.text = participants[indexPath.row].job
+        }
      
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,6 +83,7 @@ class ParticipantTableViewController: UITableViewController {
     }
     */
 
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -92,6 +100,8 @@ class ParticipantTableViewController: UITableViewController {
             }
         }
         
-    }
+    }*/
+
 
 }
+

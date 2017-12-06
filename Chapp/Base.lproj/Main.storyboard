@@ -700,7 +700,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="wCP-xU-jQW" detailTextLabel="dta-io-aGT" rowHeight="200" style="IBUITableViewCellStyleSubtitle" id="Pe4-n7-cEX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="participantCell" textLabel="wCP-xU-jQW" detailTextLabel="dta-io-aGT" rowHeight="200" style="IBUITableViewCellStyleSubtitle" id="Pe4-n7-cEX">
                                 <rect key="frame" x="0.0" y="113" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pe4-n7-cEX" id="45G-YC-yct">
