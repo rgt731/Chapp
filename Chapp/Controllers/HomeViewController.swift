@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
     var chapelProgram: ChapelProgram?
 
    //image to show failure or success
@@ -66,59 +65,29 @@ class HomeViewController: UIViewController {
        //   [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
         
        
- 
+        chapelProgram = DataSet.chapelProgramData
+        
         //get day of chapel
-        let correctDay = chapelProgram?.getChapelProgramDateDay()
-        print(correctDay!.description)
-        dayOfProgram.text = "17"
+        if let correctDay = chapelProgram?.getChapelProgramDateDay(){
+            print(correctDay)
+            dayOfProgram.text = correctDay.description
+        }
+        
         
         //get month of program
-        let correctMonth = chapelProgram?.getChapelProgramDateMonth()
+        if let correctMonth = chapelProgram?.getChapelProgramDateMonth(){
                 print(correctMonth)
-        monthOfProgram.text = "NIL"
-        /*
-        switch correctMonth{
-            case 1?:
-                print("JAN")
-                monthOfProgram.text = "JAN"
-            case 2?:
-                print("FEB")
-                monthOfProgram.text = "FEB"
-            case 3?:
-                print("MAR")
-                monthOfProgram.text = "MAR"
-            case 4?:
-                print("APR")
-                monthOfProgram.text = "APR"
-            case 5?:
-                print("MAY")
-                monthOfProgram.text = "MAY"
-            case 6?:
-                print("JUN")
-                monthOfProgram.text = "JUN"
-            case 7?:
-                print("JUL")
-                monthOfProgram.text = "JUL"
-            case 8?:
-                print("AUG")
-                monthOfProgram.text = "AUG"
-            case 9?:
-                print("SEP")
-                monthOfProgram.text = "SEP"
-            case 10?:
-                print("OCT")
-                monthOfProgram.text = "OCT"
-            case 11?:
-                print("NOV")
-                monthOfProgram.text = "NOV"
-            case 12?:
-                print("DEC")
-                monthOfProgram.text = "DEC"
-            default:
-                print("Date Not available")
-                monthOfProgram.text = "NIL"
-            
-        }*/
+                monthOfProgram.text = getMonthString(monthNumber: correctMonth)
+        }
+        
+        //get speaker of program
+        let correctSpeaker = chapelProgram?.participants
+       // print(correctSpeaker![3].job)
+       // print(correctSpeaker![3].name)
+        if let currentSpeaker = correctSpeaker![3].name{
+            chapelSpeaker.text = currentSpeaker
+        }
+     
 
 
      
@@ -168,6 +137,52 @@ class HomeViewController: UIViewController {
             
   
      
+    }
+    
+    func getMonthString(monthNumber: Int?) -> String {
+        switch monthNumber{
+        case 1?:
+            print("JAN")
+            return "JAN"
+        case 2?:
+            print("FEB")
+            return"FEB"
+        case 3?:
+            print("MAR")
+            return "MAR"
+        case 4?:
+            print("APR")
+            return "APR"
+        case 5?:
+            print("MAY")
+            return "MAY"
+        case 6?:
+            print("JUN")
+            return "JUN"
+        case 7?:
+            print("JUL")
+            return "JUL"
+        case 8?:
+            print("AUG")
+            return "AUG"
+        case 9?:
+            print("SEP")
+            return "SEP"
+        case 10?:
+            print("OCT")
+            return "OCT"
+        case 11?:
+            print("NOV")
+            return "NOV"
+        case 12?:
+            print("DEC")
+            return "DEC"
+        default:
+            print("Date Not available")
+            return ""
+            
+        }
+        
     }
  
 

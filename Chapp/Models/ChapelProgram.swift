@@ -5,11 +5,7 @@
 //  Created by Robert Thompson on 12/2/17.
 //  Copyright © 2017 Robert Thompson. All rights reserved.
 //
-
 import Foundation
-
-
-
 
 public class ChapelProgram{
     

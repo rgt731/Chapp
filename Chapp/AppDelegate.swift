@@ -32,6 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
+        //change global text
+        let attrs = [
+           // NSAttributedStringKey.foregroundColor: UIColor.red,
+            NSAttributedStringKey.font: UIFont(name: "Avenir Next", size: 20)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        
+       // self.navigationController.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Avenir Next", size: 18)!
+
+        
         //change back button text
         let newFont = UIFont(name: "Avenir Next", size: 18.0)!
         let color = UIColor.white

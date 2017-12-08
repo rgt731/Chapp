@@ -67,16 +67,16 @@ class DataSet {
     //Particpants
     //Name, Job,
     static let particpantData = [
-        Participant(name: "Andrew Hinson", job: "Prayer"),
-        Participant(name: "Logan Cain", job: "Songs"),
-        Participant(name: "Ben Moon", job: "Scripture"),
-        Participant(name: "Roy Sharp", job: "Speaker")
+        Participant(name: "Andrew Hinson", job: "Prayer", imageName: "prayer.jpg"),
+        Participant(name: "Logan Cain", job: "Songs", imageName: "music.jpg"),
+        Participant(name: "Ben Moon", job: "Scripture", imageName: "bible.jpg"),
+        Participant(name: "Roy Sharp", job: "Speaker", imageName: "preach.jpg")
     ]
     
     
     static let chapelProgramData =
         ChapelProgram(title: "God's Grace",
-                      date : makeDate(year: 2017, month: 6, day: 09)!,
+                      date : makeDate(year: 2017, month: 12, day: 8)!,
                       participants: particpantData)
     
     

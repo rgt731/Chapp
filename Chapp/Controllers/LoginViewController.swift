@@ -39,12 +39,13 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         //TODO: Here, perform log in with tabbed controller
         
+        /*
         //indicates which tab bar icon is intiaially highlighted and displayed
        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
         
         //change index from first tab to middle - last one
         mainTabController.selectedViewController = mainTabController.viewControllers?[1]
-        present(mainTabController, animated: true, completion: nil)
+        present(mainTabController, animated: true, completion: nil)*/
         
         
         //authenticate username and password

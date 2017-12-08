@@ -11,7 +11,7 @@ import UIKit
 class ParticipantTableViewController: UITableViewController {
 
     var chapelProgram: ChapelProgram?
-    //var data: [Participant]?
+
     //date items
     //day of program
     @IBOutlet weak var dayOfProgram: UILabel!
@@ -24,58 +24,22 @@ class ParticipantTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //get day of chapel
-        let correctDay = chapelProgram?.getChapelProgramDateDay()
-        dayOfProgram.text = correctDay!.description
+        if let correctDay = chapelProgram?.getChapelProgramDateDay(){
+            dayOfProgram.text = correctDay.description
+            print("Particpant day",correctDay.description)
+        }
         
         //get month of program
-        let correctMonth = chapelProgram?.getChapelProgramDateMonth()
-
-        switch correctMonth{
-            case 1?:
-                     print("JAN")
-                                 monthOfProgram.text = "JAN"
-            case 2?:
-                     print("FEB")
-                                 monthOfProgram.text = "FEB"
-            case 3?:
-                     print("MAR")
-                                 monthOfProgram.text = "MAR"
-            case 4?:
-                     print("APR")
-                                 monthOfProgram.text = "APR"
-            case 5?:
-                     print("MAY")
-                                 monthOfProgram.text = "MAY"
-            case 6?:
-                     print("JUN")
-                                 monthOfProgram.text = "JUN"
-            case 7?:
-                     print("JUL")
-                                 monthOfProgram.text = "JUL"
-            case 8?:
-                     print("AUG")
-                                 monthOfProgram.text = "AUG"
-            case 9?:
-                     print("SEP")
-                                 monthOfProgram.text = "SEP"
-            case 10?:
-                     print("OCT")
-                                 monthOfProgram.text = "OCT"
-            case 11?:
-                     print("NOV")
-                                 monthOfProgram.text = "NOV"
-            case 12?:
-                     print("DEC")
-                                 monthOfProgram.text = "DEC"
-            default:
-                     print("Date Not available")
-                                 monthOfProgram.text = "NIL"
+        if let correctMonth = chapelProgram?.getChapelProgramDateMonth(){
         
+        monthOfProgram.text = getMonthString(monthNumber: correctMonth)
         }
-
         
         //get chapel program
         chapelTitle.text = chapelProgram?.title
+        
+        //set picture
+        
  
      
 
@@ -103,7 +67,7 @@ class ParticipantTableViewController: UITableViewController {
         else
         {
             return 0
-        }
+        }  
     }
 
     
@@ -159,6 +123,52 @@ class ParticipantTableViewController: UITableViewController {
         }
         
     }*/
+    
+    func getMonthString(monthNumber: Int) -> String {
+        switch monthNumber{
+        case 1:
+            print("JAN")
+            return "JAN"
+        case 2:
+            print("FEB")
+            return"FEB"
+        case 3:
+            print("MAR")
+            return "MAR"
+        case 4:
+            print("APR")
+            return "APR"
+        case 5:
+            print("MAY")
+            return "MAY"
+        case 6:
+            print("JUN")
+            return "JUN"
+        case 7:
+            print("JUL")
+            return "JUL"
+        case 8:
+            print("AUG")
+            return "AUG"
+        case 9:
+            print("SEP")
+            return "SEP"
+        case 10:
+            print("OCT")
+            return "OCT"
+        case 11:
+            print("NOV")
+            return "NOV"
+        case 12:
+            print("DEC")
+            return "DEC"
+        default:
+            print("Date Not available")
+            return ""
+            
+        }
+        
+    }
     
 
 
