@@ -25,8 +25,26 @@ public class ChapelProgram{
         
     }
     
+    func getChapelProgramDateDay() -> Int{
+        
+        let now = date
+        let calendar = Calendar.current
+        
+        let chapelDay = calendar.component( .day, from: now!)
+        
+        return chapelDay
+    }
     
-    
+    func getChapelProgramDateMonth() -> Int{
+        
+        let now = date
+        let calendar = Calendar.current
+        
+        let chapelDay = calendar.component( .month, from: now!)
+        
+        return chapelDay
+    }
+          
 }
 
 

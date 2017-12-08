@@ -23,54 +23,62 @@ class ParticipantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      /*  let date = Date()
-        let units: Set<Calendar.Component> = [.hour, .day, .month, .year]
-        let comps = Calendar.current.dateComponents(units, from: date)*/
+        //get day of chapel
+        let correctDay = chapelProgram?.getChapelProgramDateDay()
+        dayOfProgram.text = correctDay!.description
         
-        print(" ---> ",(Calendar.current.component(.hour, from: Date())),":",
-              (Calendar.current.component(.minute, from: Date())),":",
-              (Calendar.current.component(.second, from: Date())))
+        //get month of program
+        let correctMonth = chapelProgram?.getChapelProgramDateMonth()
+
+        switch correctMonth{
+            case 1?:
+                     print("JAN")
+                                 monthOfProgram.text = "JAN"
+            case 2?:
+                     print("FEB")
+                                 monthOfProgram.text = "FEB"
+            case 3?:
+                     print("MAR")
+                                 monthOfProgram.text = "MAR"
+            case 4?:
+                     print("APR")
+                                 monthOfProgram.text = "APR"
+            case 5?:
+                     print("MAY")
+                                 monthOfProgram.text = "MAY"
+            case 6?:
+                     print("JUN")
+                                 monthOfProgram.text = "JUN"
+            case 7?:
+                     print("JUL")
+                                 monthOfProgram.text = "JUL"
+            case 8?:
+                     print("AUG")
+                                 monthOfProgram.text = "AUG"
+            case 9?:
+                     print("SEP")
+                                 monthOfProgram.text = "SEP"
+            case 10?:
+                     print("OCT")
+                                 monthOfProgram.text = "OCT"
+            case 11?:
+                     print("NOV")
+                                 monthOfProgram.text = "NOV"
+            case 12?:
+                     print("DEC")
+                                 monthOfProgram.text = "DEC"
+            default:
+                     print("Date Not available")
+                                 monthOfProgram.text = "NIL"
         
-        //new code will be:
+        }
+
         
-        let date = Date()
-        let calendar = Calendar.current
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        
-        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        let currentDateString: String = dateFormatter.string(from: date)
+        //get chapel program
+        chapelTitle.text = chapelProgram?.title
+ 
      
-        
-        let currentYear = calendar.component(.year, from: date)
-        let currentMonth = calendar.component(.month, from: date)
-        let currentDay = calendar.component(.day, from: date)
-    
-        
-       /* print("Current Date" , currentYear, currentMonth, currentDay)
-        print("Current date is \(currentDateString)")
-        print("Current date is \(currentDateString)")*/
-       // monthOfProgram.text = chapelProgram?.date.day
-         let stringChapelDateDay = chapelProgram?.date?.description
-         dayOfProgram.text = stringChapelDateDay
-         chapelTitle.text = chapelProgram?.title
-         print ("Chapel date is", chapelProgram?.date?.description)
-         print ("Chapel date is", chapelProgram?.date!)
-         print ("Chapel date is", chapelProgram?.date?.timeIntervalSinceNow)
-         print ("Chapel date is", stringChapelDateDay?.description)
-        
-        
-         dayOfProgram.text = self.date()
-        print("New Day is : ",dayOfProgram.text)
 
-        
-        // title.text = chapelProgram.title
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
  

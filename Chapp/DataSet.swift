@@ -76,7 +76,7 @@ class DataSet {
     
     static let chapelProgramData =
         ChapelProgram(title: "God's Grace",
-                      date : makeDate(year: 2017, month: 6, day: 17)!,
+                      date : makeDate(year: 2017, month: 6, day: 09)!,
                       participants: particpantData)
     
     
