@@ -12,9 +12,57 @@ class ParticipantTableViewController: UITableViewController {
 
     var chapelProgram: ChapelProgram?
     //var data: [Participant]?
+    //date items
+    //day of program
+    @IBOutlet weak var dayOfProgram: UILabel!
+    //month of program
+    @IBOutlet weak var monthOfProgram: UILabel!
+    //title of chapel program
+    @IBOutlet weak var chapelTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      /*  let date = Date()
+        let units: Set<Calendar.Component> = [.hour, .day, .month, .year]
+        let comps = Calendar.current.dateComponents(units, from: date)*/
+        
+        print(" ---> ",(Calendar.current.component(.hour, from: Date())),":",
+              (Calendar.current.component(.minute, from: Date())),":",
+              (Calendar.current.component(.second, from: Date())))
+        
+        //new code will be:
+        
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        let currentDateString: String = dateFormatter.string(from: date)
+     
+        
+        let currentYear = calendar.component(.year, from: date)
+        let currentMonth = calendar.component(.month, from: date)
+        let currentDay = calendar.component(.day, from: date)
+    
+        
+       /* print("Current Date" , currentYear, currentMonth, currentDay)
+        print("Current date is \(currentDateString)")
+        print("Current date is \(currentDateString)")*/
+       // monthOfProgram.text = chapelProgram?.date.day
+         let stringChapelDateDay = chapelProgram?.date?.description
+         dayOfProgram.text = stringChapelDateDay
+         chapelTitle.text = chapelProgram?.title
+         print ("Chapel date is", chapelProgram?.date?.description)
+         print ("Chapel date is", chapelProgram?.date!)
+         print ("Chapel date is", chapelProgram?.date?.timeIntervalSinceNow)
+         print ("Chapel date is", stringChapelDateDay?.description)
+        
+        
+         dayOfProgram.text = self.date()
+        print("New Day is : ",dayOfProgram.text)
 
         
         // title.text = chapelProgram.title
@@ -24,6 +72,8 @@ class ParticipantTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,7 +151,14 @@ class ParticipantTableViewController: UITableViewController {
         }
         
     }*/
+    
 
 
 }
+
+
+    
+
+
+
 

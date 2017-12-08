@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         //TODO: Here, perform log in with tabbed controller
         
         //indicates which tab bar icon is intiaially highlighted and displayed
-        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+       let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
         
         //change index from first tab to middle - last one
         mainTabController.selectedViewController = mainTabController.viewControllers?[1]
@@ -57,6 +57,7 @@ class LoginViewController: UIViewController {
             let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
             
             mainTabController.selectedViewController = mainTabController.viewControllers?[1]
+            print("password and username was correct")
             
             present(mainTabController, animated: true, completion: nil)
         }
@@ -90,8 +91,18 @@ extension UIViewController{
         view.endEditing(true)
     }
     
+    func date() -> String{
+    let date = Date()
+    let formatter = DateFormatter()
+    
+    formatter.dateFormat = "(dd/MM/YY)"
+    
+    let result = formatter.string(from: date)
+    return result
+    }
+    
 }
-
+       
 
 
 

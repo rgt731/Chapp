@@ -21,8 +21,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     var wifiWasSuccessful = false
     var locationWasSuccessful = false
 
-    
-    
     /********************
       Status Indicators
      *********************/
@@ -34,8 +32,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     //wSuccess indicator picture
     @IBOutlet weak var Status3: UIImageView!
     
-    
-    
     /********************
          Test Text
     *********************/
@@ -46,15 +42,12 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var gpsTextLat: UILabel!
     @IBOutlet weak var gpsTextLong: UILabel!
     
-    
     /********************
              Map
      *********************/
     //the actual map
     @IBOutlet weak var map: MKMapView!
     let locationManager =  CLLocationManager()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,22 +60,6 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
         
         //check both are corect
         checkLocationWifi()
-        
-        //draw a line
-        // Add a green line with thickness 1, width 200 at location (50, 100)
-        //y is up/down x is left/right
-      /*  let line = UIView(frame: CGRect(x: 50, y: 375, width: 300, height: 1))
-        line.backgroundColor = UIColor.black
-        self.view.addSubview(line)*/
-        
-        
-        //map
-        func centerOnLocation(location: CLLocationCoordinate2D) {
-            let regionRadius: CLLocationDistance = 1000
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, regionRadius, regionRadius)
-            map.setRegion(coordinateRegion, animated: true)
-        }
-
     
     }
 
@@ -107,45 +84,24 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
        // let width = NSString(string: addr).doubleValue
         let first4 = addr[0].prefix(4)
         let double_1 : Double = (first4 as NSString).doubleValue
-        //let type = type(of: value)
-  
-    //    print("first four letters of ip address are: ", first4)
-    //    print("first four letters of ip address are: ", double_1, "Its type is ", double_1)
         
-
-        
-        
+        /*****************************************
+                   Wifi Authentication
+         ******************************************/
         // Create a range and authenticate
         //range should be  - 10.5.32.0/19.
-        let contains = (10.5...10.5).contains(double_1)
+        let contains = (10.2...10.5).contains(double_1)
         if (contains == true){
                 print("\n You are on the correct IP Address ", double_1, "\n")
                 Status1.image = UIImage(named: "yes.png")
                 wifiWasSuccessful = true
+                 print("Wifi worked - set true")
         }else{
                print("\n You are on the wrong IP Address ", double_1, "\n")
             Status1.image = UIImage(named: "no.png")
+             wifiWasSuccessful = false
+                 print("Wifi worked - set false")
         }
-        
-        /*  
-        //authentication
-        if ( first4 == "10.5" || first4 == "10.6")
-        {
-            if(double_1 == 10.5){
-                print("This is an int: ", double_1)
-            }else{
-                    print("This is NOT an int: ", double_1)
-            }
-        
-            Status1.image = UIImage(named: "yes.png")
-        }
-        else{
-        
-            Status1.image = UIImage(named: "no.png")
-        }*/
- 
-        
-        
         
         //debugging
       
@@ -162,6 +118,9 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             //return false
 
         }
+        
+        //check both are corect
+        checkLocationWifi()
 
     }
 
@@ -206,6 +165,7 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     
     //B: Is the User in the right location?
     func checkLocation(){
+        Status2.isHidden = false
         
         //request access to location
         //for when the app is open and in the background
@@ -223,20 +183,16 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
-        
-        //authentication
-        
-        Status2.isHidden = false
-        
-        
     }
+   /*
+    func centerOnLocation(location: CLLocationCoordinate2D) {
+        let regionRadius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, regionRadius, regionRadius)
+        map.setRegion(coordinateRegion, animated: true)
+    }
+    */
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-       /*
-        var locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        var lat : String = locValue.latitude.description
-        var lng : String = locValue.longitude.description
-        */
         // lat :35.4384 long : -88.6377
         
         if let location = locations.first{
@@ -253,17 +209,26 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             gpsTextLat.text! = "\(lat)"
             gpsTextLong.text! = "\(long)"
             
+            
+            /*****************************************
+                       Location Authentication
+            ******************************************/
+            
             if (lat == "35.439" && long == "-88.638"){
                 print ("That is the CORRECT Coordinates ", lat, long, "\n")
                 Status2.image = UIImage(named: "yes.png")
                 locationWasSuccessful = true
+                print("Location worked - set true")
+
             }else{
                  Status2.image = UIImage(named: "no.png")
-                       print ("Nope, Coordinates not right ", lat, long, "\n")
+                 locationWasSuccessful = false
+                     print("Location did not work - set false")
+                       print ("Nope, Coordinates not correct ", lat, long, "\n")
             }
             
             //center on map on user location
-            let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(0.001, 0.001)
             let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
             let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
             map.setRegion(region, animated: true)
@@ -282,12 +247,11 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
             dropPin.markerTintColor = blue
             dropPin.glyphImage = UIImage(named: "chevron-icon")*/
             map.addAnnotation(dropPin)
-           
+            //check both are corect
+            checkLocationWifi()
             //self.currentLocation = (CLLocationCoordinate2D){.latitude = 0.0, .longitude = 0.0};
         }
     }
-    
-    
     
     /******************************************************************
      *********                  Wifi / Location           *************
@@ -297,35 +261,35 @@ class CheckInViewController: UIViewController, CLLocationManagerDelegate {
     func checkLocationWifi(){
         Status3.isHidden = false
         
+        /*****************************************
+               Wifi/Location Authentication
+         ******************************************/
         
         if (wifiWasSuccessful == true && locationWasSuccessful == true){
                     Status3.image = UIImage(named: "yes.png")
-        }else{
-                    Status3.image = UIImage(named: "no.png")
+                    print("Authenticated")
+            
+                    //***************************************************************
+                    //do things that let server know you have checked in successfully
         }
-         Status3.image = UIImage(named: "yes.png")
+        else{
+                    Status3.image = UIImage(named: "no.png")
+                     print("Not authenticated")
+        }
     }
-    
-    
- 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-   
-    
-    
-    
-    
-    
-    
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

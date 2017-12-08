@@ -70,7 +70,7 @@ class DataSet {
         Participant(name: "Andrew Hinson", job: "Prayer"),
         Participant(name: "Logan Cain", job: "Songs"),
         Participant(name: "Ben Moon", job: "Scripture"),
-        Participant(name: "Billy Smith", job: "Speaker")
+        Participant(name: "Roy Sharp", job: "Speaker")
     ]
     
     

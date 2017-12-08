@@ -10,13 +10,23 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    var chapelProgram: ChapelProgram?
+
    //image to show failure or success
     @IBOutlet weak var failSuccessImage: UIImageView!
-    
     //actual check in button
     @IBOutlet weak var checkInButtion: UIButton!
-    
     //function for when the check in button is clicked
+    
+    //Date Items
+    //Day
+    @IBOutlet weak var dayOfProgram: UILabel!
+    //Month
+    @IBOutlet weak var monthOfProgram: UILabel!
+    
+    @IBOutlet weak var chapelSpeaker: UILabel!
+    
     @IBAction func homeButtonClicked(_ sender: UIButton) {
         
        // checkInButtion.currentImage = UIImage(named: "button-click.png")
@@ -27,9 +37,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // dayOfProgram.text = chapelProgram?.date
+ 
        // navigationController?.navigationBar.barTintColor = .red
         
-        
+      //  chapelSpeaker.text = chapelProgram?.participants.
         //adding image in top nav bar
        /*  let imageView  = UIImageView(frame: CGRect(x:0, y:0, width:80, height: 80))
            imageView.contentMode = .scaleAspectFill // set imageview's content mode
