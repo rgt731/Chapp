@@ -51,7 +51,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="E94-OD-mYb" eventType="touchUpInside" id="Slt-xG-g5K"/>
-                                            <segue destination="vNk-pD-S3f" kind="showDetail" action="showViewController:sender:" id="MOh-D2-MtB"/>
                                         </connections>
                                     </button>
                                 </subviews>

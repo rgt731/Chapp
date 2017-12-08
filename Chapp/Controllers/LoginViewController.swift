@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         if userNameTextbox.text == username && passwordTextBox.text == password
         {
             errorMessageIndicator.isHidden = true
-            let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+           let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
             
             mainTabController.selectedViewController = mainTabController.viewControllers?[1]
             print("password and username was correct")
